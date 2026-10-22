@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma 视觉设计与前端交付"
+  short_description: "整理图片导出 Frame、保留可编辑文字，完成图标替换和移动端适配验收"
+  default_prompt: "使用 $figma-visual-handoff，按现有网站风格完成本次 Figma 设计任务，并检查独立图片 Frame、文字分层和前端交付素材。"
