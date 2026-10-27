@@ -5,7 +5,7 @@
 
 | skill | 用途 |
 |---|---|
-| `figma-ui-walkthrough-feishu` | 对照 Figma 与线上网页做 UI 走查：同倍率合并标注图，写入飞书多维表格（页面→尺寸→模块），回读校验，不丢他人数据。触发词：走查、UI验收、还原度、飞书走查表 |
+| `UI走查-飞书` | 对照 Figma 与线上网页做 UI 走查：同倍率合并标注图，写入飞书多维表格（页面→尺寸→模块），回读校验，不丢他人数据。触发词：走查、UI验收、还原度、飞书走查表 |
 | `personal-ai-work`（根目录 `SKILL.md`） | 个人长期工作偏好 |
 | `figma-visual-handoff` / `figma-icon-replacement-qa` | Figma 视觉交付 / 图标替换 QA |
 | `gui-design-patent-cn` | 中国大陆 GUI 外观设计专利交底 |
@@ -15,10 +15,10 @@
 
 ```bash
 git clone https://github.com/t9vrk7rzrt-wqc/my-ai-skill.git /tmp/my-ai-skill   # 已有则 git pull
-cp -R /tmp/my-ai-skill/figma-ui-walkthrough-feishu ~/.cursor/skills/                  # Cursor 个人 skills
-cp -R /tmp/my-ai-skill/figma-ui-walkthrough-feishu ~/.codex/skills/                   # Codex（可选）
+cp -R /tmp/my-ai-skill/UI走查-飞书 ~/.cursor/skills/                  # Cursor 个人 skills
+cp -R /tmp/my-ai-skill/UI走查-飞书 ~/.codex/skills/                   # Codex（可选）
 ```
 
-然后对 Cursor 说“用 figma-ui-walkthrough-feishu 走查 XX 页面”，或直接说“做 UI 走查”。
+然后对 Cursor 说“用 UI走查-飞书 走查 XX 页面”，或直接说“做 UI 走查”。
 
-`figma-ui-walkthrough-feishu` 依赖：`lark-cli`（已登录）、`node` + `npm i puppeteer-core` + 本机 Chrome、`python3` + `Pillow`；Figma token 只放环境变量 `FIGMA_TOKEN`，用完撤销。
+`UI走查-飞书` 依赖：`lark-cli`（已登录）、`node` + `npm i puppeteer-core` + 本机 Chrome、`python3` + `Pillow`；Figma token 只放环境变量 `FIGMA_TOKEN`，用完撤销。
