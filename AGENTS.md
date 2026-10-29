@@ -15,6 +15,7 @@
 - 网页演示：`guizang-ppt-skill`。
 - 视频剪辑与制作：`openfilm`。
 - 查找技能：`find-skills`。
+- REA：仅当用户明确说“调用REA开始完成这个工作”或明确要求立即用 REA 执行时，读取 `rea/SKILL.md`。仅提及、引用口令或讨论未来调用不启动分析；不自动后台执行。
 
 每个专项技能的 `references/`、`scripts/`、`assets/` 只服务于该技能，不是额外的全局规范。
 
