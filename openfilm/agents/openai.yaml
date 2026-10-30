@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenFilm视频剪辑与制作"
+  short_description: "使用OpenFilm制作和剪辑视频，处理字幕、动态图形、预览检查与最终导出"
+  default_prompt: "使用 $openfilm，完成本次视频剪辑、制作和导出检查。"

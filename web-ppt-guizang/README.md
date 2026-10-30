@@ -1,3 +1,5 @@
+> 本仓库按用途命名为 `web-ppt-guizang`（网页PPT与演讲配图），源自 `guizang-ppt-skill`；下面的官方仓库、作者、许可证和上游安装示例保留原名。本仓库安装与调用以根目录 README 为准。
+
 # Guizang PPT Skill · 网页 PPT / 配图 / 封面
 
 > 🌏 **English version: [README.en.md](./README.en.md)**

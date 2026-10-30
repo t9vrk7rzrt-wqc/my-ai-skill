@@ -1,3 +1,5 @@
+> This repository names the skill `web-ppt-guizang` by purpose. Upstream identity, attribution, license and upstream installation examples below remain unchanged. Use the root README for this repository installation.
+
 # Guizang PPT Skill · Web Decks / Images / Covers
 
 An agent skill for Claude Code, Codex, and similar coding-agent environments. It generates **single-file HTML horizontal-swipe decks**, deck visuals, and social cover pages.

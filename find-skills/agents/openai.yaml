@@ -1,0 +1,4 @@
+interface:
+  display_name: "技能查找评估与安装"
+  short_description: "查找已有技能并评估用途、来源、依赖和权限，按授权安装适用的专项技能"
+  default_prompt: "使用 $find-skills，查找并评估适合当前任务的技能。"

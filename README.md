@@ -1,52 +1,69 @@
-# 我的 AI 工作规范与专项技能
+# AI工作规范与专项技能
 
-先读通用规范，再按任务调用技能。仓库按“读取时机”和“工作类型”分组；保留现有技能目录和调用路径。
+先读通用规范，再按工作方向选专项。每项只有一个规范入口；用中文显示名直观选择，用标准英文名称稳定调用。
 
-## 一、工作前必须读：通用规范
+- 智能体先看[AGENTS.md](AGENTS.md)与[机器索引skills-index.json](skills-index.json)。
+- 工作前通用入口：[personal-ai-work](SKILL.md)。
+- 专项技能保持独立顶层目录；按类别展示，不增加会妨碍发现的多层文件夹。
 
-| 文件 | 作用 | 读取时机 |
+## 图片、图标与Figma
+
+| 中文名称 | 调用名 / 入口 | 适用方向 | 不负责 |
+|---|---|---|---|
+| 生图即修图规范 | [image-editing-standards](image-editing-standards/SKILL.md) | 位图生图、局部修复、真实组件、透视厚度、清晰度、保护区和前后对照 | 纯SVG重绘、页面布局 |
+| Figma图标设计替换与验收 | [figma-icon-replacement-qa](figma-icon-replacement-qa/SKILL.md) | SVG候选、风格统一、局部替换、实际尺寸与素材打包 | 整页适配、照片修复 |
+| Figma视觉设计与前端交付 | [figma-visual-handoff](figma-visual-handoff/SKILL.md) | 页面设计、PC转移动、可编辑文字、媒体Frame和前端交付 | 网站编码、位图精修 |
+| 网页视觉走查与飞书记录 | [ui-visual-audit-feishu](ui-visual-audit-feishu/SKILL.md) | Figma对线上双端多语言、标注证据、飞书回读 | 直接修改线上页面或设计稿 |
+
+图标规则已经集中在图标Skill；Figma交付只保留分层与适配衔接。生图修图规则集中在image-editing-standards，通用视觉参考只负责路由与品牌语境。
+
+## 文档、演示与视频
+
+| 中文名称 | 调用名 / 入口 | 适用方向 |
 |---|---|---|
-| [AGENTS.md](AGENTS.md) | 仓库工作入口，说明必读顺序和分类 | 在本仓库工作时首先遵循 |
-| [SKILL.md](SKILL.md) · `personal-ai-work` | 长期偏好、中文沟通、修改边界、版本保护、自查交付、历史文件复用 | 每个新窗口、每个新任务，实质性操作前完整读取 |
+| GUI外观专利交底与成稿 | [gui-design-patent-cn](gui-design-patent-cn/SKILL.md) | 中国GUI外观设计、界面说明Word、变化状态图包 |
+| 网页PPT与演讲配图 | [web-ppt-guizang](web-ppt-guizang/SKILL.md) | 单HTML横向演示、杂志风/瑞士风、配图与封面 |
+| OpenFilm视频剪辑与制作 | [openfilm](openfilm/SKILL.md) | 视频、字幕、动态图形、预览与导出 |
 
-根目录 `SKILL.md` 是唯一主规范。专项技能和补充规范按下面的触发条件读取。
+网页PPT交付HTML，不等于原生PPTX。照片配图需要时组合生图规范；OpenFilm保留官方名称、原文和许可证。
 
-## 二、按任务读取：专项技能
+## 通用、技能维护与应用分析
 
-| 分组 | 技能入口 | 什么时候用 |
+| 中文名称 | 调用名 / 入口 | 读取或启动条件 |
 |---|---|---|
-| Figma 视觉交付 | [figma-visual-handoff](figma-visual-handoff/SKILL.md) | 移动适配、图片与文字分层、可编辑图层和前端素材交付 |
-| Figma 图标 | [figma-icon-replacement-qa](figma-icon-replacement-qa/SKILL.md) | 图标候选、替换、统一风格与实际尺寸验收 |
-| UI 走查与飞书 | [UI走查-飞书](UI走查-飞书/SKILL.md) | Figma 对照线上页面、标注差异、写入飞书走查表并回读 |
-| GUI 专利与文档 | [gui-design-patent-cn](gui-design-patent-cn/SKILL.md) | 中国 GUI 外观设计专利、界面说明 Word、配套状态图 |
-| 网页 PPT | [guizang-ppt-skill](guizang-ppt-skill/SKILL.md) | 横向翻页网页演示、杂志风或瑞士风 PPT |
-| 视频剪辑与制作 | [openfilm](openfilm/SKILL.md) | 剪视频、字幕、动态图形、预览检查与导出 |
-| 技能发现 | [find-skills](find-skills/SKILL.md) | 寻找已有技能、评估来源、补充当前缺少的能力 |
+| 通用工作规范 | [personal-ai-work](SKILL.md) | 每个任务开始先完整读取 |
+| 技能查找评估与安装 | [find-skills](find-skills/SKILL.md) | 需要发现或补充已有技能时 |
+| REA应用与发布包分析（手动） | [rea](rea/SKILL.md) | 用户明确说“调用REA开始完成这个工作”或明确要求立即执行 |
 
-Figma 视觉交付和图标技能用途不同；图标任务可组合读取，不互相替代。旧 `codex-workflow-memory` 的长期规则已经合入 `personal-ai-work`，本仓库不再增加重复副本。
+REA保持手动调用，提及、引用或讨论接入不启动分析。find-skills和openfilm的来源及版本见[第三方技能说明](docs/external-skills.md)。
 
-## 三、按任务读取：主规范的补充细则
+## 旧名迁移
 
-| 细则 | 读取条件 |
-|---|---|
-| [视觉规范](references/visual-guidelines.md) | Figma、品牌图片、SVG、局部精修 |
-| [Figma 桌面自动化](references/figma-desktop-automation.md) | 涉及桌面自动化、结构化导入、检查与预览等原有触发条件 |
-| [文档与表格规范](references/document-guidelines.md) | 表格、Word、翻译或文档编辑 |
-| [提示词规范](references/prompt-guidelines.md) | 编写可复用提示词 |
-| [代码与项目规范](references/development-guidelines.md) | 编码、Android 或项目修改 |
-| [插件与技能维护](references/skill-maintenance.md) | 技能发现、安装更新、GitHub 同步与去重 |
-| [本机记录与周会](references/local-reporting.md) | 周会、总结、经验回顾或工作量统计，执行本机来源及统计基线限制 |
+| 原名称 / 目录 | 当前标准名称 | 说明 |
+|---|---|---|
+| UI走查-飞书 | ui-visual-audit-feishu | 统一为标准英文调用名，中文显示名说明网页走查与飞书记录 |
+| guizang-ppt-skill | web-ppt-guizang | 用网页PPT用途作前缀，保留Guizang作者识别与上游归属 |
+| codex-workflow-memory | personal-ai-work | 旧协作记忆已合入通用规范，本仓库不再保存重复入口 |
+| 原视觉参考中的图片细则 | image-editing-standards | 其他入口按需引用，不各写一套生图修图规范 |
+| Figma交付参考中的图标细则 | figma-icon-replacement-qa | 独特规则已合入图标专项，交付参考只保留衔接 |
 
-技能目录内的 `references/`、`scripts/`、`assets/` 是对应技能的资料、工具和模板，按其入口指令使用。
+aliases是检索和迁移线索，不代表同一客户端能自动调用未安装的旧名，也不创建第二份SKILL.md。
+
+## 按需参考
+
+[视觉路由](references/visual-guidelines.md)、[Figma桌面自动化](references/figma-desktop-automation.md)、[文档与表格](references/document-guidelines.md)、[提示词](references/prompt-guidelines.md)、[代码与项目](references/development-guidelines.md)、[技能维护](references/skill-maintenance.md)、[本机总结](references/local-reporting.md)。它们从属于通用规范；专项内references、scripts和assets从属于对应Skill。
 
 ## 安装与调用
 
-本机 Codex 的默认入口保持为 `/Users/yeahmobi/.codex/skills/personal-ai-work/SKILL.md`。仓库更新不会自动安装到本机或其他设备。
+- 通用规范：将根目录SKILL.md、references、docs、agents和skills-index.json一起安装到personal-ai-work目录，不复制全部兄弟技能。
+- 专项：复制整个同名文件夹到客户端技能目录，例如~/.codex/skills/；目录内的资料和脚本一起保留。
+- 不把整个仓库当成单个技能安装。目录分类用于查找，调用以客户端实际发现的Skill为准。
+- 已装旧目录时先比较用户改动，再迁移到新名称，确认后只保留一个有效入口。本次仓库重命名不自动改动现有客户端安装。
+- 自然语言示例：使用生图即修图规范；用Figma图标设计替换与验收；用网页视觉走查与飞书记录检查这个页面。
+- 显式调用示例：$image-editing-standards、$ui-visual-audit-feishu、$web-ppt-guizang。
 
-安装主规范时，将根目录 `SKILL.md`、`references/` 和 `docs/` 一起放入 `personal-ai-work/`。安装某个专项技能时，只复制它的整个同名文件夹到客户端的技能目录；例如 `~/.codex/skills/` 或 `~/.cursor/skills/`。不要把整个仓库当成单个技能复制，否则会混入不相关的技能与资源。
+图像检查脚本依赖Python3与Pillow。网页走查原有依赖为lark-cli、Node.js、puppeteer-core、Chrome、Python与Pillow；认证信息只放本机环境。OpenFilm及其他工具按当前专项说明核对环境。
 
-调用时可以说“用 UI走查-飞书 走查这个页面”“用 OpenFilm 剪这个视频”“查找适合这项工作的 skill”。按当前环境已安装的技能选择，不把仓库中有文件当成已经安装成功。
+## 证据与隐私
 
-`UI走查-飞书` 的原有依赖：已登录的 `lark-cli`、Node.js、`puppeteer-core`、本机 Chrome、Python 和 Pillow。Figma token 使用环境变量 `FIGMA_TOKEN`，不提交到仓库。
-
-`find-skills` 和 `openfilm` 的官方来源、保存版本、许可证和更新办法见 [第三方技能说明](docs/external-skills.md)。本仓库没有配置自动持续更新。
+公开同步只包含可复用规则、去标识案例及检查脚本。真实修改前后图片、完整聊天、任务ID和本机审计索引留在获授权的本机项目目录，不随仓库发布。生图规范的去标识案例说明问题与方法；每次实际任务仍需建立真实对照，不能用示例代替验收证据。

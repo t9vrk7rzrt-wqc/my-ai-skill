@@ -1,30 +1,37 @@
-# 本仓库工作入口
+# 智能体工作入口
 
-## 工作前必须读
+## 先读通用规范
 
-每个新窗口、每个新任务开始，在执行实质性操作前完整读取根目录 [SKILL.md](SKILL.md)。它是 `personal-ai-work` 的唯一主规范，包含沟通方式、修改边界、版本保护、自查交付和历史文件复用要求。
+每个新窗口、每个任务实质性操作前完整读取根目录[SKILL.md](SKILL.md)，它是personal-ai-work的唯一通用规范。用户当前明确要求优先；已有授权内的常规动作直接推进。
 
-当前用户明确指令优先；与已有授权一致的常规动作直接完成。不要因为任务涉及多个文件就重复索要确认。
+## 按工作方向选择一个主技能
 
-## 按工作类型读取
+优先看[技能索引](skills-index.json)的name、display_name、category、purpose、entry。需要安装、旧名迁移或比较边界时看[README](README.md)。只读取当前任务需要的专项，跨方向任务再组合，不一次加载全部技能。
 
-按根目录 `SKILL.md` 的“阅读顺序与任务分组”表选择补充规范和专项技能。只加载当前任务需要的内容；不要把某个专项技能里的步骤推广到所有工作。
+| 工作方向 | 主技能 |
+|---|---|
+| 生成/修复位图、真实产品、前后图和保护区核验 | image-editing-standards |
+| SVG图标设计、精修、替换及实际尺寸验收 | figma-icon-replacement-qa |
+| Figma布局、移动适配、分层与前端素材交付 | figma-visual-handoff |
+| Figma对线上页面、标注证据及飞书记录 | ui-visual-audit-feishu |
+| 中国GUI外观专利交底、Word与状态图包 | gui-design-patent-cn |
+| 网页PPT、演讲配图与封面 | web-ppt-guizang |
+| 视频剪辑、字幕、动画与导出 | openfilm |
+| 查找、评估和安装技能 | find-skills |
+| 应用/发布包分析 | rea，仅限明确立即调用 |
 
-- 视觉与设计：`figma-visual-handoff`、`figma-icon-replacement-qa`、`UI走查-飞书`。
-- 专利文档：`gui-design-patent-cn`。
-- 网页演示：`guizang-ppt-skill`。
-- 视频剪辑与制作：`openfilm`。
-- 查找技能：`find-skills`。
-- REA：仅当用户明确说“调用REA开始完成这个工作”或明确要求立即用 REA 执行时，读取 `rea/SKILL.md`。仅提及、引用口令或讨论未来调用不启动分析；不自动后台执行。
+REA只有用户明确说“调用REA开始完成这个工作”或明确要求立即用REA执行时才读取并启动；仅提及、引用口令、讨论未来调用不启动目标分析，不自动后台执行。REA的allow_implicit_invocation必须保持false。
 
-每个专项技能的 `references/`、`scripts/`、`assets/` 只服务于该技能，不是额外的全局规范。
+## 单一规则归属与命名
 
-## 维护边界
+- 通用协作规则只在根目录SKILL.md维护；生图修图细则只在image-editing-standards维护；图标细则只在figma-icon-replacement-qa维护。其他入口引用，不重复维护整套规则。
+- 每个专项使用用途明确的独立顶层目录，目录名与frontmatter.name一致，采用小写英文及短横线；界面显示名和描述直说中文用途。第三方工具可保留工具名以便与上游对应。
+- 不加数字顺序前缀，不把技能塞入多层分类文件夹；分类体现在README和机器索引，保持入口易于发现。
+- 旧名称仅记录在skills-index.json.aliases与README迁移表，不保留第二份重复Skill。更新命名时同步正文链接、显示元数据和索引。
+- references、scripts、assets服务于所属技能，不是新增全局技能。先比较名称、描述、用途和内容再去重，不因相近而删掉不同交付能力。
 
-保留现有技能目录名和调用路径。先核对本机与远端版本、名称和用途再同步；不把功能相近直接当成重复，不复制已经合入主规范的旧记忆技能。
+## 来源与同步边界
 
-第三方技能保留来源和许可证，更新时对照 [第三方技能说明](docs/external-skills.md) 的版本记录核实。不得把令牌、私有素材或本机聊天记录提交到仓库。
+第三方保留作者、来源和许可证；读取[第三方来源](docs/external-skills.md)再更新。不提交令牌、客户或私有原图、本机聊天记录、任务快照和完整工作区。匿名规则与方法可以收录，真实对比证据留在获授权的项目目录。
 
-## 本机全局生效范围
-
-本文件自动约束该仓库范围内的工作。跨项目、跨窗口的默认读取依赖本机 `/Users/yeahmobi/.codex/AGENTS.md`，入口为 `/Users/yeahmobi/.codex/skills/personal-ai-work/SKILL.md`；更新 GitHub 不会自动替换这些本机文件。其他机器、其他客户端和不同 `CODEX_HOME` 需要分别配置。
+GitHub同步和本机安装分别验证。根目录入口在本机通常安装为~/.codex/skills/personal-ai-work/SKILL.md；跨窗口读取依赖本机全局AGENTS配置。本仓库改名不会自动改名现有安装，也不代表其他账号、设备或CODEX_HOME已经更新。

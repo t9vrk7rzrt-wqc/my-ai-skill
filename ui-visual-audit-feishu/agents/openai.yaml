@@ -1,0 +1,4 @@
+interface:
+  display_name: "网页视觉走查与飞书记录"
+  short_description: "对照Figma与线上双端多语言页面，制作标注证据并写入飞书后回读校验"
+  default_prompt: "使用 $ui-visual-audit-feishu，按指定范围完成网页视觉走查与飞书证据记录。"

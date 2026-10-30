@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma图标设计替换与验收"
+  short_description: "根据相邻模块统一SVG图标风格，确认候选后局部替换并检查实际尺寸效果"
+  default_prompt: "使用 $figma-icon-replacement-qa，完成图标候选、替换和实际尺寸验收。"

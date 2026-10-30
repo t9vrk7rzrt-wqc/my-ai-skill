@@ -1,93 +1,41 @@
 ---
 name: figma-icon-replacement-qa
-description: Replace and refine icons in the user's currently selected Figma page/frame using supplied SVG resources, with strict visual consistency, zoom QA, and SVG asset packaging.
+description: 在现有Figma页面设计、选择、精修和替换可编辑SVG图标，匹配相邻图标的语义、线宽、颜色、视觉占比与光学中心，完成实际尺寸截图验收和SVG打包。用于图标候选及局部替换；页面适配和媒体分层转figma-visual-handoff，位图修复转image-editing-standards。
 metadata:
-  short-description: Figma icon replacement QA
+  short-description: Figma图标候选、替换、实际尺寸验收与SVG交付
 ---
 
-# Figma Icon Replacement QA
+# Figma图标设计替换与验收
 
-Use this skill when the user wants icons replaced or refined in a currently selected Figma page/frame, especially when they reference previous requirements for SolaStyle/LONGi page icon work.
+这是图标工作的唯一专项规范，合并原图标Skill与Figma交付文档中的重复规则。遵循当前用户要求与通用规范；Figma写入前读取当前安装的figma-use。
 
-## Core Contract
+## 目标、来源与候选
 
-- Treat the user's current Figma selection as the work scope unless they explicitly name another frame or page.
-- Replace only the old icons the user marks or describes. Do not change text, fonts, font sizes, colors, layout, spacing, cards, navigation, backgrounds, images, or unrelated icons.
-- If the user numbers icons in a screenshot, preserve that numbering in your plan, implementation notes, and final summary.
-- If any meaning, target, color, replacement range, or asset choice is unclear, ask before editing. Do not guess.
-- Prefer the user's supplied icon resource package. Choose icons by semantic fit first, then refine them into a unified visual system.
-- If no suitable supplied SVG exists, tell the user which icon is missing and offer search keywords or generate a clean editable SVG only after the user agrees or asks.
+1. 读取目标页面/节点和相邻同类图标，检查当前选择与用户指定范围一致，保留截图编号到对象的映射。
+2. 测量原容器、线宽、颜色、端点、转角、视觉占比、留白、圆底与图文距离。24×24、1.6px、某种红色都不能跨模块硬套；既有站点红色若为#E50914仍在当前模块核对。
+3. 优先检查用户SVG包，按语义选择，再简化细节和匹配风格。已授权设计且无合适素材时可生成可编辑SVG；只有缺失信息会改变结果时追问。
+4. 用户要求先看候选时展示实际尺寸和放大图，记录选中版本后再替换。不擅自换成后来偏好的候选；比例/风格参考不等于照抄形状。
 
-## Selection And Replacement
+## 图形精修
 
-Before editing Figma:
+- 同组统一线宽、端点、连接、圆角、色彩、复杂度、视觉重量、光学中心及图文距离。数值尺寸相同不等于视觉等大。
+- 清除突起、毛刺、断线、浮块、意外重叠、小尺寸黑块。空心轮子和孔洞不能被车轴或其他线穿过；必要遮罩不能破坏透明和语义。
+- 两种纯色、无高光要求不增加渐变、阴影或第三色。
+- 填充轮廓与中心线描边是不同交付；不承诺无损转换且能任意调线宽。保真或重绘按目标选择。
+- SVG显式设置viewBox、画布与所需描边。线性图标按需要设置fill="none"、端点和连接。currentColor导入可能变黑，核对真实颜色或变量。
 
-- Inspect the selected Figma frame/page and identify the exact icon node IDs, container sizes, and module grouping.
-- Inspect the supplied SVG resource package when provided.
-- Match each old icon to the best replacement by meaning, not merely by original file style.
-- When multiple candidate SVGs could fit, prefer the one whose silhouette communicates the module best and can be simplified into the same style as its neighbors.
+## 替换范围
 
-When replacing:
+- 只替换指定图标，保留原容器坐标、尺寸、底板、文案、布局与其他图标；浅色圆底和内部符号分别辨认。
+- 先备份旧SVG/可回退副本，再导入真实选中的最终SVG。按当前工具文档使用figma.createNodeFromSvg，不用位图或临时线段拼接冒充资源。
+- 不对称空白调整内部构图，不移动原容器补偿。移动端不得漏缩圆底，也不得把内部小符号放大成邻居的整个容器。
+- 返回每次创建、修改、删除的节点ID。解除实例须获授权且必要，防止嵌套实例祖先ID失效。
 
-- Keep each icon inside its original icon container unless the user explicitly asks to move the area.
-- Preserve the original icon area's position and size.
-- Preserve existing background shapes such as pale red circles unless the user asks to replace them.
-- Use editable SVG/vector content, not raster images.
-- Return all mutated and created Figma node IDs from every write operation.
+## 验收与交付
 
-## Visual Consistency Requirements
-
-For icons in the same module, make these visually consistent:
-
-- Stroke thickness, linecap, linejoin, corner radius, and endpoint treatment.
-- Overall visual size, not only numeric width and height.
-- Complexity and detail density. Avoid one icon being overly detailed while another is too simple.
-- Large position inside the container: icons should sit on the same optical center.
-- Small distances around the icon: top, bottom, left, right padding should feel balanced.
-- Distance from icon to background circle, text, card edges, and neighboring icons.
-- Color, including required red/black variants. Use the page's existing color behavior unless the user specifies a color.
-
-For red support/homepage icons, keep the red consistent with the existing site icon red when known: `#E50914`.
-
-## Refinement Standards
-
-Refine SVGs when needed:
-
-- Remove rough protruding segments, accidental overlaps, broken joins, floating pieces, and jagged-looking corners.
-- Avoid stroke intersections that make small icons look filled or muddy.
-- Use masks or background-colored fills carefully only when needed to create clean cutouts, such as hollow vehicle wheels.
-- Make vehicle wheels visibly hollow when requested. Wheel centers must not be crossed by body or axle strokes.
-- Simplify overly complex source icons so they match the module's visual density.
-- Avoid copying a reference icon exactly when the user says it is only a proportion/style reference.
-
-## QA Before Finishing
-
-Do not finish immediately after replacement. Perform a self-check first:
-
-- Capture an overall screenshot of the module.
-- Inspect at least the changed icon containers at higher zoom or by node bounds/stroke data.
-- Confirm no icon exceeds its original container unless explicitly intended.
-- Confirm strokes are consistent and there are no negative offsets, out-of-frame edges, clipped lines, rough protrusions, disconnected segments, or accidental filled-looking areas.
-- Confirm icon-to-text and icon-to-background spacing still matches the module.
-- If the visual check reveals an issue, fix it before final response.
-
-Only claim visual QA that was actually performed.
-
-## Asset Packaging
-
-After finalizing replacements:
-
-- Save the actual final SVGs used in Figma into the user's requested icon folder.
-- If no folder is specified, ask for the folder before writing outside the workspace.
-- Use clear filenames that map to the page/module and icon meaning.
-- Keep SVGs editable, with explicit `viewBox`, `fill="none"` for line icons where appropriate, and consistent stroke settings.
-- Validate SVG syntax when possible, for example with `xmllint --noout`.
-
-## Final Response
-
-Keep the final response concise and concrete:
-
-- List which numbered icons changed and what they changed to.
-- State what was intentionally left untouched.
-- Mention the self-check performed.
-- Provide a clickable link to the final SVG folder or files when assets were written.
+1. 检查SVG可解析，可用时运行xmllint --noout。语法成功不证明视觉正确。
+2. 查看整模块真实截图、最终实际尺寸与风险局部放大。核对线宽、颜色、留白、居中、裁切、底板、图文距离与容器越界。
+3. 只替换一处时对照周边布局，适用时加像素差分，抗锯齿结合实际画面解释。不合格继续修正，没截图不得声称视觉验收通过。
+4. 保存真正写入Figma的最终SVG，以模块和语义命名，放指定目录或当前可写工作目录，不为默认输出位置反复追问。
+5. 图标导出Frame只包含所需符号和底板，不含卡片文字；页面媒体与文字分层由figma-visual-handoff维护。
+6. 简述编号图标的改动和实际检查，给节点及最终SVG链接，只声明验证过的内容。

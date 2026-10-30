@@ -1,0 +1,4 @@
+interface:
+  display_name: "生图即修图规范"
+  short_description: "生成或局部修复真实感图片，核对指定素材、透视厚度及修改前后保护区域"
+  default_prompt: "使用 $image-editing-standards，锁定已确认内容，只处理指定图片问题并核验交付。"

@@ -1,5 +1,5 @@
 ---
-name: UI走查-飞书
+name: ui-visual-audit-feishu
 description: >-
   UI 走查（验收）工作流：对照 Figma 设计稿与线上网页（PC/移动，中英德等多语言），
   用 Figma 节点数据 + 线上 DOM/计算样式 + 像素复核逐元素找差异，生成按模块合并的编号标注图，

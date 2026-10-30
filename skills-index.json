@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "required_entry": "SKILL.md",
+  "layout": "flat-purpose-directories",
+  "aliases_are_documented_names_not_duplicate_skills": true,
+  "skills": [
+    {
+      "name": "personal-ai-work",
+      "display_name": "通用工作规范",
+      "category": "通用入口",
+      "entry": "SKILL.md",
+      "aliases": [
+        "codex-workflow-memory"
+      ],
+      "purpose": "工作前读取沟通、修改边界、历史文件复用和交付要求，按需进入专项技能",
+      "implicit_invocation": true
+    },
+    {
+      "name": "image-editing-standards",
+      "display_name": "生图即修图规范",
+      "category": "图片生成与编辑",
+      "entry": "image-editing-standards/SKILL.md",
+      "aliases": [
+        "生图即修图规范"
+      ],
+      "purpose": "生成或局部修复真实感图片，核对指定素材、透视厚度及修改前后保护区域",
+      "implicit_invocation": true
+    },
+    {
+      "name": "figma-visual-handoff",
+      "display_name": "Figma视觉设计与前端交付",
+      "category": "Figma设计与交付",
+      "entry": "figma-visual-handoff/SKILL.md",
+      "aliases": [],
+      "purpose": "完成Figma移动适配、图片与文字分层、独立导出Frame及前端交付检查",
+      "implicit_invocation": true
+    },
+    {
+      "name": "figma-icon-replacement-qa",
+      "display_name": "Figma图标设计替换与验收",
+      "category": "SVG图标",
+      "entry": "figma-icon-replacement-qa/SKILL.md",
+      "aliases": [],
+      "purpose": "根据相邻模块统一SVG图标风格，确认候选后局部替换并检查实际尺寸效果",
+      "implicit_invocation": true
+    },
+    {
+      "name": "ui-visual-audit-feishu",
+      "display_name": "网页视觉走查与飞书记录",
+      "category": "网页验收",
+      "entry": "ui-visual-audit-feishu/SKILL.md",
+      "aliases": [
+        "UI走查-飞书"
+      ],
+      "purpose": "对照Figma与线上双端多语言页面，制作标注证据并写入飞书后回读校验",
+      "implicit_invocation": true
+    },
+    {
+      "name": "gui-design-patent-cn",
+      "display_name": "GUI外观专利交底与成稿",
+      "category": "专利与文档",
+      "entry": "gui-design-patent-cn/SKILL.md",
+      "aliases": [],
+      "purpose": "收集和核对GUI状态图，整理中国外观设计专利界面说明Word与配套图片",
+      "implicit_invocation": true
+    },
+    {
+      "name": "web-ppt-guizang",
+      "display_name": "网页PPT与演讲配图",
+      "category": "网页演示",
+      "entry": "web-ppt-guizang/SKILL.md",
+      "aliases": [
+        "guizang-ppt-skill"
+      ],
+      "purpose": "生成杂志风或瑞士风横向翻页HTML演示稿，配套封面和嵌入图片并验证版式",
+      "implicit_invocation": true
+    },
+    {
+      "name": "openfilm",
+      "display_name": "OpenFilm视频剪辑与制作",
+      "category": "视频制作",
+      "entry": "openfilm/SKILL.md",
+      "aliases": [],
+      "purpose": "使用OpenFilm制作和剪辑视频，处理字幕、动态图形、预览检查与最终导出",
+      "implicit_invocation": true
+    },
+    {
+      "name": "find-skills",
+      "display_name": "技能查找评估与安装",
+      "category": "技能维护",
+      "entry": "find-skills/SKILL.md",
+      "aliases": [],
+      "purpose": "查找已有技能并评估用途、来源、依赖和权限，按授权安装适用的专项技能",
+      "implicit_invocation": true
+    },
+    {
+      "name": "rea",
+      "display_name": "REA应用与发布包分析（手动）",
+      "category": "应用分析",
+      "entry": "rea/SKILL.md",
+      "aliases": [],
+      "purpose": "仅在用户明确立即调用后分析应用、网站或发布包，依据运行证据完成指定任务",
+      "implicit_invocation": false
+    }
+  ]
+}

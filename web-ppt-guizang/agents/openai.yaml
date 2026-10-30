@@ -1,0 +1,4 @@
+interface:
+  display_name: "网页PPT与演讲配图"
+  short_description: "生成杂志风或瑞士风横向翻页HTML演示稿，配套封面和嵌入图片并验证版式"
+  default_prompt: "使用 $web-ppt-guizang，制作并检查本次网页PPT与演讲配图。"

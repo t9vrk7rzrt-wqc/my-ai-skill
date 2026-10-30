@@ -46,6 +46,13 @@ npx -y openfilm@latest skills   # 列出当前内置剪辑流程和风格
 
 长视频剪短片、屏幕录制演示等细分流程，以工具当时列出的技能为准，需要时再读取，避免把全部视频说明放进工作前必读规范。
 
+## Guizang网页PPT分支
+
+- 本仓库按工作方向命名为`web-ppt-guizang`，界面名称“网页PPT与演讲配图”。
+- 上游身份保留为`guizang-ppt-skill`，来源为已有README记录的[op7418/guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)。
+- 作者署名、MIT许可证、模板、脚本和参考文件保留；当前变更为目录/入口用途命名与中文发现元数据，不宣称已更新到最新上游版本。
+- 两份上游README保留其官方安装命令，并在开头说明本仓库调用名与上游原名的区别。本仓库安装以根README和skills-index.json为准。
+
 ## 更新办法
 
 1. 读取上述官方路径，对照记录的提交版本，确认变更和依赖。

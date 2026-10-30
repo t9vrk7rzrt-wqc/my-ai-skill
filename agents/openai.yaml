@@ -1,0 +1,4 @@
+interface:
+  display_name: "通用工作规范"
+  short_description: "工作前读取沟通、修改边界、历史文件复用和交付要求，按需进入专项技能"
+  default_prompt: "使用 $personal-ai-work，遵循本机长期工作规范完成当前任务。"

@@ -2,7 +2,7 @@
 name: personal-ai-work
 description: 按用户的长期工作偏好处理品牌网站、视觉素材、Figma、图标 SVG、表格、文档、提示词、翻译与项目实现任务；默认中文大白话、直接推进、严格保留未指定内容并在交付前主动自查。涉及目标市场视觉、本地化图片精修、Figma 可编辑图层或桌面自动化时，也使用本技能的专门工作流。
 metadata:
-  version: "2.6.0"
+  version: "2.7.0"
   short-description: 个人工作偏好、品牌视觉与 Figma 工作流
   source-repository: "https://github.com/t9vrk7rzrt-wqc/my-ai-skill"
 ---
@@ -20,13 +20,14 @@ metadata:
 | 当前任务 | 按需补充规范 | 专项技能 |
 |---|---|---|
 | Figma 视觉稿、移动适配、图层与素材交付 | [视觉规范](references/visual-guidelines.md) | `figma-visual-handoff` |
-| Figma 图标候选、替换与小尺寸验收 | [视觉规范](references/visual-guidelines.md) | `figma-icon-replacement-qa` |
-| 对照 Figma 与线上页面进行 UI 走查、写入飞书 | [视觉规范](references/visual-guidelines.md) | `UI走查-飞书` |
-| 品牌网站图片、局部精修、SVG | [视觉规范](references/visual-guidelines.md) | 按实际素材选择当前环境的图像或矢量工具 |
+| Figma SVG图标设计、候选、替换与小尺寸验收 | [视觉规范](references/visual-guidelines.md) | `figma-icon-replacement-qa` |
+| 对照 Figma 与线上页面进行 UI 走查、写入飞书 | [视觉规范](references/visual-guidelines.md) | `ui-visual-audit-feishu` |
+| 位图生图、局部修复、真实素材替换与图片核验 | [视觉路由](references/visual-guidelines.md) | `image-editing-standards` |
 | GUI 外观设计专利、界面说明 Word 与配图 | [文档规范](references/document-guidelines.md) | `gui-design-patent-cn` |
-| 横向翻页网页 PPT | [视觉规范](references/visual-guidelines.md) | `guizang-ppt-skill` |
+| 横向翻页网页 PPT | [视觉规范](references/visual-guidelines.md) | `web-ppt-guizang` |
 | 视频制作、剪辑、字幕、动画、检查或导出 | [OpenFilm 来源与调用](docs/external-skills.md#openfilm) | `openfilm` |
 | 查找可用技能、扩展当前缺少的能力 | [技能维护规范](references/skill-maintenance.md) | `find-skills` |
+| 用户明确立即调用REA进行应用或发布包分析 | 先确认本轮目标与授权 | `rea`，保持手动调用 |
 | 技能、插件安装更新或 GitHub 同步 | [技能维护规范](references/skill-maintenance.md) | 使用当前可用的安装或维护工具 |
 | 普通表格与文档 | [文档规范](references/document-guidelines.md) | 使用当前环境的对应专项技能 |
 | 编写提示词 | [提示词规范](references/prompt-guidelines.md) | 按目标平台处理 |
@@ -104,7 +105,7 @@ metadata:
 - 不要凭记忆判断本地文件、GitHub 状态、价格、日期、规则或已安装工具；需要新鲜状态时实际检查。
 - 不要把命令输出、工具细节和中间文件噪音直接丢给用户；最终用中文说明做了什么、在哪里、还剩什么。
 - 不要覆盖或删除用户已有改动。清理重复内容时先比较，再只删除明确冗余的副本。
-- 不要为修复一处已指出的图片问题而重做整张已确认画面；局部问题优先局部处理，并复核未修改区域是否发生变化。
+- 生图修图的局部保护、已确认项回归与像素证据统一由`image-editing-standards`维护，按任务读取，不另建重复规则。
 - 不要在需求收集阶段提前动手，也不要在用户尚未说完时把零散意见误当成最终完整要求。
 - 不要因为历史附件暂时不可见就假装记得其内容，或未经确认生成一个“差不多”的文件顶替原件；过期或丢失时先向用户索要原件，收到后再继续。
 - 不要为了尽快结束任务而忽略未解决的问题。失败后应分析原因并更换有效方法，不能反复提交未经检查的随机结果。
