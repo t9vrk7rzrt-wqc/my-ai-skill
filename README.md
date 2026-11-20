@@ -13,7 +13,7 @@
 | 生图即修图规范 | [image-editing-standards](image-editing-standards/SKILL.md) | 位图生图、局部修复、真实组件、透视厚度、清晰度、保护区和前后对照 | 纯SVG重绘、页面布局 |
 | Figma图标设计替换与验收 | [figma-icon-replacement-qa](figma-icon-replacement-qa/SKILL.md) | SVG候选、风格统一、局部替换、实际尺寸与素材打包 | 整页适配、照片修复 |
 | Figma视觉设计与前端交付 | [figma-visual-handoff](figma-visual-handoff/SKILL.md) | 页面设计、PC转移动、可编辑文字、媒体Frame和前端交付 | 网站编码、位图精修 |
-| 网页视觉走查与飞书记录 | [ui-visual-audit-feishu](ui-visual-audit-feishu/SKILL.md) | Figma对线上双端多语言、标注证据、飞书回读 | 直接修改线上页面或设计稿 |
+| 网页视觉走查与飞书记录 | [ui-visual-audit-feishu](ui-visual-audit-feishu/SKILL.md) | Figma对线上双端多语言、标注证据、飞书回读；含 [SolaStyle 详情页专项](ui-visual-audit-feishu/solastyle-pdp.md) | 直接修改线上页面或设计稿 |
 
 图标规则已经集中在图标Skill；Figma交付只保留分层与适配衔接。生图修图规则集中在image-editing-standards，通用视觉参考只负责路由与品牌语境。
 

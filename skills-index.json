@@ -52,7 +52,7 @@
       "aliases": [
         "UI走查-飞书"
       ],
-      "purpose": "对照Figma与线上双端多语言页面，制作标注证据并写入飞书后回读校验",
+      "purpose": "对照Figma与线上双端多语言页面，制作标注证据并写入飞书后回读校验；含SolaStyle详情页逐套走查专项规则",
       "implicit_invocation": true
     },
     {
