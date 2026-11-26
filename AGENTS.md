@@ -13,7 +13,7 @@
 | 生成/修复位图、真实产品、前后图和保护区核验 | image-editing-standards |
 | SVG图标设计、精修、替换及实际尺寸验收 | figma-icon-replacement-qa |
 | Figma布局、移动适配、分层与前端素材交付 | figma-visual-handoff |
-| Figma对线上页面、标注证据及飞书记录 | ui-visual-audit-feishu |
+| DTC建站双端走查、标注证据及飞书记录 | ui-visual-audit-feishu |
 | 中国GUI外观专利交底、Word与状态图包 | gui-design-patent-cn |
 | 网页PPT、演讲配图与封面 | web-ppt-guizang |
 | 视频剪辑、字幕、动画与导出 | openfilm |

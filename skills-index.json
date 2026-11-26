@@ -46,13 +46,13 @@
     },
     {
       "name": "ui-visual-audit-feishu",
-      "display_name": "网页视觉走查与飞书记录",
+      "display_name": "DTC建站双端走查与飞书记录",
       "category": "网页验收",
       "entry": "ui-visual-audit-feishu/SKILL.md",
       "aliases": [
         "UI走查-飞书"
       ],
-      "purpose": "对照Figma与线上双端多语言页面，制作标注证据并写入飞书后回读校验；含SolaStyle详情页逐套走查专项规则",
+      "purpose": "适用于所有DTC建站的PC/移动双端走查：对照Figma与线上、标注证据、写入飞书并回读；通用规范沉淀于此，项目专册可选另读",
       "implicit_invocation": true
     },
     {
