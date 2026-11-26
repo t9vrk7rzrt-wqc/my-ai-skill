@@ -58,8 +58,14 @@ REST：`GET /v1/files/:key/nodes?ids=<node>&geometry=paths`，header `X-Figma-To
 
 ## 线上采集
 
-`scripts/capture_live.js`：固定视口 1920×1000 / 390×844，`deviceScaleFactor=1`；滚动到底触发懒加载再回顶；等待 `document.fonts.ready`；输出每个叶子元素的 rect + 计算样式（含祖先累乘 opacity）。
+`scripts/capture_live.js`：固定视口 1920×1000 / 390×844；**标注取证截图 `deviceScaleFactor≥2`**（糊图不准当证据）；滚动到底触发懒加载再回顶；等待 `document.fonts.ready`；输出每个叶子元素的 rect + 计算样式（含祖先累乘 opacity）。
 宽度敏感性判断：另取 1440/375/430 等宽度，对比各元素样式（`wdiff` 思路：基准 vs 其它宽度）。样式几乎不随宽度变的问题=宽度无关，直接记；只在窄屏出现的溢出/折行=宽度相关，备注说明。
+
+## 所属模块命名变体（以用户表为准）
+
+- 常见 A：`页面` + `尺寸` 分字段，`所属模块` 用 `01 Header … 16 全局`
+- 常见 B：`所属模块` 拼 `{一级页面}-{语言}-{端}`，PC/移动/语言分组分离
+- 写前 `+field-list` 确认选项已存在；缺选项先问用户，不自创错名
 
 ## 多语言（德语为例）
 
